@@ -3,13 +3,17 @@
 
 LL87 Data Cleaning Script
 
-Created on Sat Nov  8 10:14:23 2014
+Copyright 2016, Bright Power Inc.
+Author: Conor Laver
 
-@author: conor
+  This Source Code Form is subject to the terms of the Mozilla Public
+  License, v. 2.0. If a copy of the MPL was not distributed with this
+  file, You can obtain one at http://mozilla.org/MPL/2.0/.
+  
 """
 import pandas as pd
 
-filepath = ("LL87 2013+2014 Energy Audit Data.xlsx")
+filepath = "LL87 2013+2014 Energy Audit Data.xlsx"
 column_list="A,C,G,H,J,K,L,M,N,P,U,AG,AO:AV,BD:BT,CO:CV,CY,DE,FL,FQ,GK,GR,IN,IT,UX:AIT,AJH:AJS,ANB"
 ll87data = pd.io.excel.read_excel(filepath,sheetname="All (1)s",parse_cols=column_list,skiprows=3)
 
